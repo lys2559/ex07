@@ -22,6 +22,7 @@ const LocalPage = () => {
         setLocals(result.data.documents);
         setIs_end(result.data.meta.is_end);
         seTotal(result.data.meta.pageable_count);
+        setLoading(false);
     }
 
     useEffect(()=>{

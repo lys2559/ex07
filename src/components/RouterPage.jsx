@@ -10,22 +10,22 @@ const RouterPage = () => {
     return (
         <>
             <Navbar bg="light" expand="lg" className='mb-5'>
-                <Container>
+                <Container fluid>
                     <Link to="/books">LOGO</Link>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="me-auto">
+                        <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
                             <Link to="/">Home</Link>
-                            <Link to="/books">도서검색</Link>
+                            <Link to="/books">도서관리</Link>
                             <Link to="/locals">지역검색</Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
             <Switch>
-                <Route path="/" component={HomePage} exact={true}/>
-                <Route path="/books" component={BookPage}/>
-                <Route path="/locals" component={LocalPage}/>
+                <Route path="/" component={HomePage} exact={true} />
+                <Route path="/books" component={BookPage} />
+                <Route path="/locals" component={LocalPage} />
             </Switch>
         </>
     )
